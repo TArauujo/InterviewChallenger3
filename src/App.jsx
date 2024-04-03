@@ -58,6 +58,7 @@ function App() {
             <option value='solteiro'>Solteiro</option>
             <option value='casado'>Casado</option>
             <option value='divorciado'>Divorciado</option>
+            <option value='divorciado'>Enrolado</option>
           </select>
         </div>
         <div className='form-group'>
@@ -68,6 +69,9 @@ function App() {
             </span>
             <span>
               <input type='radio' /> Feminino
+            </span>
+            <span>
+              <input type='radio' /> LGBTQIAPN+
             </span>
           </div>
         </div>
