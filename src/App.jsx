@@ -35,25 +35,30 @@ Ao enviar, deve-se apresentar um alert javascript com sucesso, limpar todos os c
 do formulário e zerar a barra de progresso novamente.
 */
 
+import { useState } from "react";
+
 function App() {
+  
+  const [data, setData] = useState({
+
+  });
+  
   return (
     <div className='App'>
-      <h3>desafio fernandev</h3>
-      <h1>progresso do formulário</h1>
 
       <main>
         {/* crie a barra de progresso aqui */}
         <div className='form-group'>
           <label htmlFor=''>Nome Completo</label>
-          <input />
+          <input name="fullName"/>
         </div>
         <div className='form-group'>
           <label htmlFor=''>E-mail</label>
-          <input />
+          <input name={"email"}/>
         </div>
         <div className='form-group'>
           <label htmlFor=''>Estado Civil</label>
-          <select>
+          <select name="maritalStatus">
             <option value=''>- selecione...</option>
             <option value='solteiro'>Solteiro</option>
             <option value='casado'>Casado</option>
