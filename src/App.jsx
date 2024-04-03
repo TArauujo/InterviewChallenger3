@@ -43,7 +43,7 @@ function App() {
     fullName: '',
     email: '',
     maritalStatus: '',
-    genre: ''
+    genre: 'L'
   });
 
   const handleChange = () => {
@@ -70,20 +70,20 @@ function App() {
             <option value='solteiro'>Solteiro</option>
             <option value='casado'>Casado</option>
             <option value='divorciado'>Divorciado</option>
-            <option value='divorciado'>Enrolado</option>
+            <option value='enrolado'>Enrolado</option>
           </select>
         </div>
         <div className='form-group'>
           <label htmlFor=''>Gênero</label>
           <div className='radios-container'>
             <span>
-              <input type='radio' name="genre"/> Masculino
+              <input type='radio' name='genre' value='masculino' onChange={handleChange} checked={data.genre === 'masculino'}/> Masculino
             </span>
             <span>
-              <input type='radio' name="genre"/> Feminino
+              <input type='radio' name='genre' value='feminino' onChange={handleChange} checked={data.genre === 'feminino'}/> Feminino
             </span>
             <span>
-              <input type='radio' name="genre"/> LGBTQIAPN+
+              <input type='radio' name='genre' value='LGBTQIAPN+' onChange={handleChange} checked={data.genre === 'LGBTQIAPN+'}/> LGBTQIAPN+
             </span>
           </div>
         </div>
