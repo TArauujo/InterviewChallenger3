@@ -43,12 +43,19 @@ function App() {
     fullName: '',
     email: '',
     maritalStatus: '',
-    genre: 'L'
+    genre: ''
   });
 
-  const handleChange = () => {
+  const handleChange = (event) => {
+    console.log(event);
 
-  }
+    setData((prev) => {
+      const newData = {...data}
+      console.log(newData)
+      return newData;
+    })
+
+  };
   
   return (
     <div className='App'>
@@ -57,15 +64,15 @@ function App() {
         {/* crie a barra de progresso aqui */}
         <div className='form-group'>
           <label htmlFor=''>Nome Completo</label>
-          <input name="fullName" value={data.fullName} onChange={handleChange}/>
+          <input name='fullName' value={data.fullName} onChange={handleChange}/>
         </div>
         <div className='form-group'>
           <label htmlFor=''>E-mail</label>
-          <input name={"email"} value={data.email} onChange={handleChange}/>
+          <input name={'email'} value={data.email} onChange={handleChange}/>
         </div>
         <div className='form-group'>
           <label htmlFor=''>Estado Civil</label>
-          <select name="maritalStatus" value={data.maritalStatus} onChange={handleChange}>
+          <select name='maritalStatus' value={data.maritalStatus} onChange={handleChange}>
             <option value=''>- selecione...</option>
             <option value='solteiro'>Solteiro</option>
             <option value='casado'>Casado</option>
