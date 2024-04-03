@@ -45,6 +45,10 @@ function App() {
     maritalStatus: '',
     genre: ''
   });
+
+  const handleChange = () => {
+
+  }
   
   return (
     <div className='App'>
@@ -53,15 +57,15 @@ function App() {
         {/* crie a barra de progresso aqui */}
         <div className='form-group'>
           <label htmlFor=''>Nome Completo</label>
-          <input name="fullName"/>
+          <input name="fullName" value={data.fullName} onChange={handleChange}/>
         </div>
         <div className='form-group'>
           <label htmlFor=''>E-mail</label>
-          <input name={"email"}/>
+          <input name={"email"} value={data.email} onChange={handleChange}/>
         </div>
         <div className='form-group'>
           <label htmlFor=''>Estado Civil</label>
-          <select name="maritalStatus">
+          <select name="maritalStatus" value={data.maritalStatus} onChange={handleChange}>
             <option value=''>- selecione...</option>
             <option value='solteiro'>Solteiro</option>
             <option value='casado'>Casado</option>
@@ -73,13 +77,13 @@ function App() {
           <label htmlFor=''>Gênero</label>
           <div className='radios-container'>
             <span>
-              <input type='radio' /> Masculino
+              <input type='radio' name="genre"/> Masculino
             </span>
             <span>
-              <input type='radio' /> Feminino
+              <input type='radio' name="genre"/> Feminino
             </span>
             <span>
-              <input type='radio' /> LGBTQIAPN+
+              <input type='radio' name="genre"/> LGBTQIAPN+
             </span>
           </div>
         </div>
