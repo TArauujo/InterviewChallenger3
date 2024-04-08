@@ -50,7 +50,7 @@ function App() {
     console.log(event);
 
     setData((prev) => {
-      const newData = {...data}
+      const newData = { ...prev, fullName: 'johnn'}
       console.log(newData)
       return newData;
     })
