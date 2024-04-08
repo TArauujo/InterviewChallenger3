@@ -49,8 +49,11 @@ function App() {
   const handleChange = (event) => {
     console.log(event);
 
+    const {name, value} = event.target;
+    
+
     setData((prev) => {
-      const newData = { ...prev, fullName: 'johnn'}
+      const newData = { ...prev, [name]: value}
       console.log(newData)
       return newData;
     })
