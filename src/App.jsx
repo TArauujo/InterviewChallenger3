@@ -47,9 +47,7 @@ function App() {
   });
 
   const handleChange = (event) => {
-    
     const {name, value} = event.target;
-    
 
     setData((prev) => {
       const newData = { ...prev, [name]: value}
@@ -63,7 +61,11 @@ function App() {
     <div className='App'>
 
       <main>
-        {/* crie a barra de progresso aqui */}
+        <div className="bar-container">
+          <div className="bar">
+            
+          </div>
+        </div>
         <div className='form-group'>
           <label htmlFor=''>Nome Completo</label>
           <input name='fullName' value={data.fullName} onChange={handleChange}/>
