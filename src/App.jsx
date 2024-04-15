@@ -88,7 +88,7 @@ function App() {
 
       <main>
         <div className="bar-container">
-          <div className="bar">
+          <div className="bar" style={{width: `${calculateProgress()}%`}}>
 
           </div>
         </div>
