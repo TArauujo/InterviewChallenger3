@@ -56,6 +56,32 @@ function App() {
     })
 
   };
+
+  const calculateProgress = () => {
+    
+    let value = 0;
+    let amountToAdd = 25;
+
+    
+    if(data.fullName){
+      value += amountToAdd;
+    }
+    if(data.email){
+      value += amountToAdd;
+    }
+    if(data.maritalStatus){
+      value += amountToAdd;
+    }
+    if(data.genre){
+      value += amountToAdd;
+    }
+
+    console.log({value});
+  
+    return value;
+  };
+
+  calculateProgress();
   
   return (
     <div className='App'>
@@ -63,7 +89,7 @@ function App() {
       <main>
         <div className="bar-container">
           <div className="bar">
-            
+
           </div>
         </div>
         <div className='form-group'>
