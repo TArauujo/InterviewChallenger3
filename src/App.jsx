@@ -90,6 +90,10 @@ function App() {
   };
 
   calculateProgress();
+
+  const handleClick = () => {
+    console.log('submited');
+  }
   
   return (
     <div className='App'>
@@ -132,7 +136,7 @@ function App() {
             </span>
           </div>
         </div>
-        <button>Enviar Formulário</button>
+        <button onClick={handleClick} disabled={calculateProgress() !== 100}>Enviar Formulário</button>
       </main>
     </div>
   );
