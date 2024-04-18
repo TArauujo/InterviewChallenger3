@@ -92,7 +92,13 @@ function App() {
   calculateProgress();
 
   const handleClick = () => {
-    console.log('submited');
+    alert('Formulário enviado com sucesso!!');
+    setData({
+      fullName: '',
+      email: '',
+      maritalStatus: '',
+      genre: '',
+    });
   }
   
   return (
