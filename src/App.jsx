@@ -64,15 +64,18 @@ function App() {
 
     
     if(data.fullName){
-
-      const explodeString = data.fullName.split('');
+      const explodeString = data.fullName.split(' ');
       if(explodeString[1]){
         value += amountToAdd;
       }
     }
 
     if(data.email){
-      value += amountToAdd;
+      let pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(pattern.test(data.email)){
+        value += amountToAdd;
+      }
+      
     }
     if(data.maritalStatus){
       value += amountToAdd;
