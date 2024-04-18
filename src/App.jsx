@@ -64,8 +64,13 @@ function App() {
 
     
     if(data.fullName){
-      value += amountToAdd;
+
+      const explodeString = data.fullName.split('');
+      if(explodeString[1]){
+        value += amountToAdd;
+      }
     }
+
     if(data.email){
       value += amountToAdd;
     }
